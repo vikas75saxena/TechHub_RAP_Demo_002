@@ -1,0 +1,60 @@
+managed;
+// implementation in class ZCL_BDEF_CONTRACTOR unique;
+//strict;
+
+define behavior for ZDEMO_I_CONTRACTOR alias contractor
+persistent table ZDEMO_CONTR
+etag master ChangedAt
+lock master
+//authorization master( global )
+{
+  field (readonly, numbering:managed) ContractorKey;
+  field (mandatory:create, readonly:update) ContractorId;
+  field (mandatory) FirstName, LastName, Country, ExternalId;
+  mapping for ZDEMO_CONTR
+ {
+  ContractorKey = contr_key;
+  ContractorId = contractor_id;
+  VendorId = vendor_id;
+  FirstName = first_name;
+  LastName = last_name;
+  Country = country;
+  StartDate = start_date;
+  EndDate = end_date;
+  Status = status;
+  ExternalId = external_id;
+  CreatedBy = created_by;
+  CreatedAt = created_at;
+  ChangedBy = last_changed_by;
+  ChangedAt = last_changed_at;
+  }
+  create;
+  update;
+  delete;
+  association _attendance { create; }
+}
+
+define behavior for ZDEMO_I_ATTENDANCE alias attendance
+persistent table ZDEMO_ATTEND
+lock dependent by _contractor
+//authorization dependent by _contractor
+etag master ChangedAt
+{
+  field (readonly, numbering : managed ) AttendanceKey;
+  mapping for ZDEMO_ATTEND
+  {
+  AttendanceKey = attendance_key;
+  ContractorKey = contractor_key;
+  EntryDate = entry_date;
+  TimeIn = time_in;
+  TimeOut = time_out;
+  CreatedBy = created_by;
+  CreatedAt = created_at;
+  ChangedBy = last_changed_by;
+  ChangedAt = last_changed_at;
+  }
+  update;
+  delete;
+  field ( readonly ) ContractorKey;
+  association _contractor { }
+  }

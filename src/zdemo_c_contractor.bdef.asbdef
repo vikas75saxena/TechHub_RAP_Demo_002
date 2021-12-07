@@ -1,0 +1,21 @@
+projection;
+//strict; //Comment this line in to enable strict mode. The strict mode is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZDEMO_C_CONTRACTOR alias Contractor
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _attendance { create; }
+}
+
+define behavior for ZDEMO_C_ATTENDANCE alias Attendance
+use etag
+{
+  use update;
+  use delete;
+
+  use association _contractor;
+}
