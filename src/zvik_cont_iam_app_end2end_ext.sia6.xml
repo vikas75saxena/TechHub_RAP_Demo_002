@@ -4,9 +4,9 @@
   <asx:values>
    <SIA6>
     <MAIN_OBJECT>
-     <NAME>ZDEMO_CONTR_UI_EXT</NAME>
+     <NAME>ZVIK_CONT_IAM_APP_END2END_EXT</NAME>
      <TYPE>SIA6</TYPE>
-     <DESCRIPTION>Contractor Demo - UI</DESCRIPTION>
+     <DESCRIPTION>Contractor IAM App Test for End to end Deployment</DESCRIPTION>
      <RESPONSIBLE>CB9980000106</RESPONSIBLE>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
      <MASTER_SYSTEM>TRL</MASTER_SYSTEM>
@@ -14,17 +14,17 @@
       <PACKAGE_NAME>ZDEMO_HUB_RAP_001</PACKAGE_NAME>
      </PACKAGE_REF>
     </MAIN_OBJECT>
-    <APP_ID>ZDEMO_CONTR_UI_EXT</APP_ID>
+    <APP_ID>ZVIK_CONT_IAM_APP_END2END_EXT</APP_ID>
     <APP_TYPE>EXT</APP_TYPE>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
     <SERVICE>
      <item>
-      <REL_NAME>ZDEMO_SRV_CONTRACTOR_UI            0001</REL_NAME>
+      <REL_NAME>ZVIK_CONT_SRV_BNDG_END2END         0001</REL_NAME>
       <REL_TYPE>IWSV</REL_TYPE>
-      <APP_ID>ZDEMO_CONTR_UI_EXT</APP_ID>
-      <SRVC_NAME>D021F13123F83EFF5AEBD01D57DEEB</SRVC_NAME>
+      <APP_ID>ZVIK_CONT_IAM_APP_END2END_EXT</APP_ID>
+      <SRVC_NAME>6D29BBB16A4197190C801998BE5335</SRVC_NAME>
       <SRVC_TYPE>HT</SRVC_TYPE>
-      <TEXT>Contractor - UI</TEXT>
+      <TEXT>Contractor - UI - End 2 end deployment</TEXT>
       <TYPE_TEXT>OData V2</TYPE_TEXT>
      </item>
     </SERVICE>
@@ -42,13 +42,19 @@
         <VALUES>
          <item>
           <FIELD>ACTVT</FIELD>
-          <VALUE>Add or Create, Display</VALUE>
+          <VALUE>Change, Delete, Display, Add or Create</VALUE>
           <VALUES>
            <item>
-            <LOW_VALUE>01</LOW_VALUE>
+            <LOW_VALUE>02</LOW_VALUE>
+           </item>
+           <item>
+            <LOW_VALUE>06</LOW_VALUE>
            </item>
            <item>
             <LOW_VALUE>03</LOW_VALUE>
+           </item>
+           <item>
+            <LOW_VALUE>01</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Activity</TEXT>

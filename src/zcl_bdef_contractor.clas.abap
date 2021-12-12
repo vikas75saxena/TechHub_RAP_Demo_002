@@ -1,0 +1,5 @@
+CLASS zcl_bdef_contractor DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zdemo_i_contractor.
+ENDCLASS.
+
+CLASS zcl_bdef_contractor IMPLEMENTATION.
+ENDCLASS.

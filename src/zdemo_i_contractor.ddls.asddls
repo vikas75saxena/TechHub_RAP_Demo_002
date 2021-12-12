@@ -22,6 +22,8 @@ association[1..1] to I_Country as _country on $projection.Country = _country.Cou
     last_changed_by as ChangedBy,
 @Semantics.systemDateTime.localInstanceLastChangedAt: true    
     last_changed_at as ChangedAt,
+ @Semantics.systemDateTime.lastChangedAt: true   
+    loc_last_changed_at as LocChangedAt,
     _attendance, // Make association public
     _country // Make association public
 }
