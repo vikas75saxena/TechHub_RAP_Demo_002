@@ -1,0 +1,18 @@
+@EndUserText.label : 'Contractor attendance data'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdemo_attend {
+  key client         : abap.clnt not null;
+  key attendance_key : sysuuid_x16 not null;
+  contractor_key     : sysuuid_x16 not null;
+  entry_date         : zentry_date;
+  time_in            : ztime_in;
+  time_out           : ztime_out;
+  created_by         : syuname;
+  created_at         : timestampl;
+  last_changed_by    : syuname;
+  last_changed_at    : timestampl;
+
+}
